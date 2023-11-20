@@ -10,7 +10,7 @@ import static io.qameta.allure.Allure.step;
 
 @Owner("Klepova Elena")
 @Feature("Main page")
-@Tags({@Tag("ui"), @Tag("main page")})
+@Tags({@Tag("ui"), @Tag("mainpage")})
 
 public class MainPageMenuTests extends TestBase {
     MainPage mainPage = new MainPage();

@@ -59,7 +59,7 @@ tasks.withType(JavaCompile) {
 }
 task MainPageMenuTests(type: Test) {
     useJUnitPlatform {
-        includeTags "ui", "main page"
+        includeTags "ui", "mainpage"
     }
 }
 task ProjectTests(type: Test) {
