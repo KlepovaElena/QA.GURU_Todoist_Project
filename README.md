@@ -1,93 +1,125 @@
-<h1 >Проект по автоматизации тестирования API сервиса <a href="https://petstore.swagger.io/#/"> Petstore</a></h1>
 
-# :man_student:: Содержание:
+<h1 >Проект по автоматизации тестирования сайта <a href="https://moskva.mts.ru"> MTS</a></h1>
 
-- <a href="#tools"> Стек используемых технологий</a>
-- <a href="#checking"> Реализованные проверки</a>
-- <a href="#jenkins"> Сборка в Jenkins</a>
-- <a href="#console"> Запуск тестов из терминала</a>
-- <a href="#allureReport"> Allure отчет</a>
+<p align="center">  
+<a href="https://moskva.mts.ru"><img src="media/logo/LogoMTS.png" alt="MainLogo" width="400"/></a>  
+</p>
+
+# 🧾 Содержание:
+
+- <a href="#tools"> Технологии и инструменты</a>
+- <a href="#cases"> Список проверок, реализованных в автоматизированных тест-кейсах</a>
+- <a href="#jenkins"> Запуск тестов (Сборка в Jenkins)</a>
+- <a href="#console"> Запуск тестов (Из терминала)</a>
+- <a href="#allureReport"> Allure-отчет</a>
 - <a href="#allure"> Интеграция с Allure TestOps</a>
-- <a href="#tg"> Уведомления в Telegram с использованием бота</a>
+- <a href="#jira"> Интеграция с Jira</a>
+- <a href="#telegram"> Уведомление в Telegram о результатах выполнения автоматизированных тестов</a>
+- <a href="#video"> Видеопример прохождения тестов Selenoid</a>
+
 
 <a id="tools"></a>
-## 🧰: Стек используемых технологий
+## 🔨 Технологии и инструменты:
 
-<p align="center">
-<a href="https://www.jetbrains.com/idea/"><img src="media/logo/Idea.svg" width="50" height="50"  alt="IDEA"/></a>
-<a href="https://rest-assured.io/"><img src="media/logo/RestAssured.png" width="50" height="50"  alt="Rest-Assured"/></a>
-<a href="https://www.java.com/"><img src="media/logo/Java.svg" width="50" height="50"  alt="Java"/></a>
-<a href="https://github.com/"><img src="media/logo/GitHub.svg" width="50" height="50"  alt="Github"/></a>
-<a href="https://junit.org/junit5/"><img src="media/logo/JUnit5.svg" width="50" height="50"  alt="JUnit 5"/></a>
-<a href="https://gradle.org/"><img src="media/logo/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>
-<a href="https://github.com/allure-framework/allure2"><img src="media/logo/Allure.svg" width="50" height="50"  alt="Allure"/></a>
-<a href="https://https://qameta.io/"><img src="media/logo/AllureTestOps.svg" width="50" height="50"  alt="AllureTestOps"/></a>
-<a href="https://www.jenkins.io/"><img src="media/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
-<a href="https://https://telegram.org/"><img src="media/logo/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
+| Java                                                                                                     | IntelliJ  <br>  Idea                                                                                               | GitHub                                                                                                     | JUnit 5                                                                                                           | Gradle                                                                                                     | Selenide                                                                                                         | Selenoid                                                                                                                  | Allure <br> Report                                                                                                         | Jenkins                                                                                                          | Jira                                                                                                                                    | Telegram                                                                                                           |                                                                                           Allure <br> TestOps |
+|:---------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------:|
+| <a href="https://www.java.com/"><img src="media/logo/Java.svg" width="50" height="50"  alt="Java"/></a> | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Idea.svg" width="50" height="50"  alt="IDEA"/></a> | <a href="https://github.com/"><img src="media/logo/GitHub.svg" width="50" height="50"  alt="Github"/></a> | <a href="https://junit.org/junit5/"><img src="media/logo/JUnit5.svg" width="50" height="50"  alt="JUnit 5"/></a> | <a href="https://gradle.org/"><img src="media/logo/Gradle.svg" width="50" height="50"  alt="Gradle"/></a> | <a href="https://selenide.org/"><img src="media/logo/Selenide.svg" width="50" height="50"  alt="Selenide"/></a> | <a href="https://aerokube.com/selenoid/"><img src="media/logo/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a> | <a href="https://github.com/allure-framework"><img src="media/logo/Allure.svg" width="50" height="50"  alt="Allure"/></a> | <a href="https://www.jenkins.io/"><img src="media/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a> | <a href="https://www.atlassian.com/software/jira/"><img src="media/logo/Jira.svg" width="50" height="50" alt="Java" title="Java"/></a> | <a href="https://web.telegram.org/"><img src="media/logo/Telegram.svg" width="50" height="50" alt="Telegram"/></a> | <a href="https://qameta.io/"><img src="media/logo/Allure_TO.svg" width="50" height="50" alt="Allure_TO"/></a> |
+
+<a id="cases"></a>
+## 🏁 Реализованные проверки:
+
+- Фильтрация красивых номеров
+- Новости за период 2023 года
+- Отсутствие результатов поиска (Негативный сценарий)
+- Проверка списка API MTS
+- Страница вакансий в IT и Digital
+- Наличие блокировки спам-звонков в архивных предложениях
+- Проверка формы пополнения баланса
+
+## <img alt="Jenkins" height="25" src="media/logo/Jenkins.svg" width="25"/> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/MTS-autotests-EVLShevchuk/)
+
+
+<p align="center">  
+<img src="media/screen/Jenkins.png" alt="Jenkins" width="950"/>  
 </p>
-
-<a id="checking"></a>
-## :male_detective:: Реализованные проверки
-
-- ✓ Проверка создания нового животного в магазине
-- ✓ Проверка чтения существующего животного в магазине
-- ✓ Проверка удаления существующего животного из магазина
-- ✓ Проверка ошибки при удалении несуществующего животного из магазина
-- ✓ Проверка ошибки при чтении несуществующего животного в магазине
 
 <a id="jenkins"></a>
-## <img src="media/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Сборка в <a target="_blank" href="https://jenkins.autotests.cloud/job/QA.GURU_PetstoreProject/"> Jenkins </a>
-<p align="center">
-<a href="https://jenkins.autotests.cloud/job/QA.GURU_PetstoreProject/allure/"><img src="media/screens/Petstore_jenkins.png" alt="Jenkins1"/></a>
-</p>
-После выполнения сборки, в блоке <code>История сборок</code> напротив номера сборки появятся значки <code>Allure Report</code> и <code>Allure TestOps</code>, при клике на которые откроется страница с сформированным html-отчетом и тестовой документацией соответственно.
+## 📋 Параметры сборки в Jenkins:
 
-
-## 🧪: Пример авто-тест кейса
-<p align="center">
-<img title="AllureSuite" src="media/screens/Petstore_alluretc.png">
-</p>
+- _STAND_BASE_URL (URL Сайта, по умолчанию moskva.mts.ru)_
+- _SELENOID_BASE_URL (URL Selenoid, по умолчанию selenoid.autotests.cloud)_
+- _TASK (Задачи, по умолчанию Smoke_test)_
+- _BROWSER (Браузер, по умолчанию chrome)_
+- _BROWSER_VERSION (Версия браузера, по умолчанию 100.0)_
+- _BROWSER_SIZE (Размер окна браузера, по умолчанию 2560x1440)_
 
 <a id="console"></a>
-## :rocket:: Запуск тестов из терминала
-Команда запуска тестов:
-```
-gradle clean test
-```
+## 🚀 Команда для запуска автотестов из терминала
 
+Удаленный запуск с использованием Jenkins и Selenoid (требуется логин и пароль):
+```bash  
+./gradlew clean test -Denv=remote
+```
 
 <a id="allureReport"></a>
-## <img width="4%" style="vertical-align:middle" title="Allure Report" src="media/logo/Allure.svg"> </a> Пример <a target="_blank" href="https://jenkins.autotests.cloud/job/QA.GURU_PetstoreProject/allure/"> Allure-отчета </a>
-## ⛅: Основной отчет
+## <img alt="Allure" height="25" src="media/logo/Allure.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://jenkins.autotests.cloud/job/MTS-autotests-EVLShevchuk/allure/">Allure Report</a>
 
-<p align="center">
-<img title="Allure Overview" src="media/screens/Petstore_allurereport.png">
+
+## 🖨️ Основная страница отчёта
+
+<p align="center">  
+<img title="Allure Overview Dashboard" src="media/screen/MainReportAllure1.png" width="850">  
+</p>  
+
+## 📄 Тест-кейсы
+
+<p align="center">  
+<img title="Allure Tests" src="media/screen/TestCasesAllure1.png" width="850">   
+</p>
+
+## 📊 Графики
+
+<p align="center">   
+<img title="Allure Graphics1" src="media/screen/GraficsAllure11.png" width="850">  
+<img title="Allure Graphics2" src="media/screen/GraficsAllure12.png" width="850">  
 </p>
 
 <a id="allure"></a>
-## <img src="media/logo/AllureTestOps.svg" width="25" height="25"  alt="Allure_TO"/></a> Интеграция с  <a target="_blank" href="https://allure.autotests.cloud/project/3730/dashboards"> Allure TestOps</a>
+## <img alt="Allure_TO" height="25" src="media/logo/Allure_TO.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3677/dashboards">Allure TestOps</a>
 
-## :bar_chart:: Доска
-На *Dashboard* в <code>Allure TestOps</code> видна статистика количества тестов. Новые тесты, а так же результаты прогона приходят по интеграции при каждом запуске сборки.
 
-<p align="center">
-<img title="Allure TestOps DashBoard" src="media/screens/Petstore_dashboard.png">
+## 🖨️ Основная страница отчёта
+
+<p align="center">  
+<img title="Allure TestOps Dashboard" src="media/screen/MainReportOps1.png" width="850">  
+</p>  
+
+## 📄 Авто и Ручные тест-кейсы
+
+<p align="center">  
+<img title="Allure Tests" src="media/screen/TestCasesOps1.png" width="850">  
 </p>
 
-## :pinching_hand:: Пример тест-кейса
-<p align="center">
-<img title="AllureTC" src="media/screens/Petstore_testcase.png">
+<a id="jira"></a>
+## <img alt="Allure" height="25" src="media/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-891">Jira</a>
+
+<p align="center">  
+<img title="Jira" src="media/screen/Jira1.png" width="">  
 </p>
 
-## :runner:: Прогоны
-<p align="center">
-<img title="Allure Tests" src="media/screens/Petstore_launches.png">
+<a id="telegram"></a>
+____
+## <img alt="Allure" height="25" src="media/logo/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
+____
+<p align="center">  
+<img title="Allure Overview Dashboard" src="media/screen/Notifications1.png" width="550">  
 </p>
 
-<a id="tg"></a>
-## <img src="media/logo/Telegram.svg" width="25" height="25"  alt="Telegram"/></a> Уведомления в телеграм с использованием бота
-После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
-
+<a id="video"></a>
+____
+## <img alt="Selenoid" height="25" src="media/logo/Selenoid.svg" width="25"/></a> Видеопример выполнения теста на Selenoid
+____
 <p align="center">
-<img title="telegram" src="media/screens/Petstore_telegram.png">
+<img title="Selenoid Video" src="media/logo/TestVideo.gif" width="550" height="350"  alt="video">   
 </p>
+
