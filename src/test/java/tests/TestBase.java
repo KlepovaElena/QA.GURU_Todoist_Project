@@ -1,6 +1,5 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.ConfigReader;
 import config.WebConfig;
@@ -16,21 +15,25 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class TestBase {
 
-    private static final WebConfig config = ConfigReader.Instance.read();
+    private static final WebConfig webConfig = ConfigReader.Instance.read();
 
     @BeforeAll
     public static void beforeAll(){
-        WebConfigProject webConfigProject = new WebConfigProject(config);
+        WebConfigProject webConfigProject = new WebConfigProject(webConfig);
         webConfigProject.webConfig();
     }
 
     @BeforeEach
     void addListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-//        open(baseUrl);
-//        open("/app/today");
-//        $("#element-0").setValue("elena.klyopova@gmail.com");
-//        $("#element-3").setValue("Elena1111!").pressEnter();
+    }
+
+    @BeforeEach
+    void beforeEach() {
+        open(baseUrl);
+        open("/app/today");
+        $("#element-0").setValue("elena.klyopova@gmail.com");
+        $("#element-3").setValue("Elena1111!").pressEnter();
     }
 
     @AfterEach

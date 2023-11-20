@@ -13,15 +13,15 @@ public class WebConfigProject {
     }
 
     public void webConfig() {
-        Configuration.baseUrl = webConfig.getBaseUrl();
-        Configuration.browser = webConfig.getBrowser().toString();
-        Configuration.browserVersion = webConfig.getBrowserVersion();
-        Configuration.browserSize = webConfig.getBrowserSize();
+        Configuration.baseUrl = webConfig.baseUrl();
+        Configuration.browser = webConfig.browser();
+        Configuration.browserVersion = webConfig.browserVersion();
+        Configuration.browserSize = webConfig.browserSize();
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000;
 
         if (webConfig.isRemote()) {
-            Configuration.remote = webConfig.getRemoteUrl();
+            Configuration.remote = webConfig.remoteUrl();
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
