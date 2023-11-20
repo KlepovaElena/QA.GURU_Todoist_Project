@@ -9,7 +9,7 @@ import org.aeonbits.owner.Config;
 public interface WebConfig extends Config{
     @Key("browser")
     @DefaultValue("CHROME")
-    Browser getBrowser();
+    String getBrowser();
 
     @Key("browserVersion")
     @DefaultValue("116.0")
@@ -25,8 +25,9 @@ public interface WebConfig extends Config{
 
     @Key("isRemote")
     @DefaultValue("true")
-    Boolean isRemote();
+    boolean isRemote();
 
     @Key("remoteUrl")
+    @DefaultValue("https://user1:1234@selenoid.autotests.cloud/wd/hub")
     String getRemoteUrl();
 }
