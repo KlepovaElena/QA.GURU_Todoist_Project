@@ -30,7 +30,6 @@ public class TestBase {
 
     @BeforeEach
     void beforeEach() {
-        open(baseUrl);
         open("/app/today");
         $("#element-0").setValue("elena.klyopova@gmail.com");
         $("#element-3").setValue("Elena1111!").pressEnter();
