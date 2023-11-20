@@ -1,5 +1,5 @@
 
-<h1 >Проект по автоматизации тестирования сайта <a href="https://todoist.com"> MTS</a></h1>
+<h1 >Проект по автоматизации тестирования сайта <a href="https://todoist.com"> Todoist</a></h1>
 
 <p align="center">  
 <a href="https://todoist.com"><img src="media/logo/Todoist.png" alt="MainLogo" width="400"/></a>  
