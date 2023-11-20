@@ -25,10 +25,6 @@ public class TestBase {
     @BeforeEach
     void addListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
-
-    @BeforeEach
-    void beforeEach() {
         open("/app/today");
         $("#element-0").setValue("elena.klyopova@gmail.com");
         $("#element-3").setValue("Elena1111!").pressEnter();
