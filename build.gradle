@@ -23,7 +23,6 @@ def allureVersion = "2.21.0",
     jacksonDatabindVersion = "2.14.2",
     javaFakerVersion = "1.0.2",
     junitJupiterVersion = "5.9.2",
-    lombokVersion = "1.18.26",
     ownerVersion = "1.0.12",
     restAssuredVersion = "5.3.0",
     selenideVersion = "6.19.1",
@@ -45,12 +44,10 @@ dependencies {
             "io.appium:java-client:$appiumJavaClientVersion",
             "com.github.javafaker:javafaker:$javaFakerVersion",
             "org.junit.jupiter:junit-jupiter:$junitJupiterVersion",
-            "org.projectlombok:lombok:$lombokVersion",
             "org.aeonbits.owner:owner:$ownerVersion",
             "io.rest-assured:rest-assured:$restAssuredVersion",
             "com.codeborne:selenide:$selenideVersion",
-            "org.slf4j:slf4j-simple:$slf4jVersion",
-            'com.github.javafaker:javafaker:1.0.2'
+            "org.slf4j:slf4j-simple:$slf4jVersion"
     )
 }
 
