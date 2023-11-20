@@ -3,14 +3,13 @@ package tests;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.ConfigReader;
 import config.WebConfig;
-import config.WebConfigProject;
+import config.ProjectConfiguration;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
-import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
 
 public class TestBase {
@@ -19,7 +18,7 @@ public class TestBase {
 
     @BeforeAll
     public static void beforeAll(){
-        WebConfigProject webConfigProject = new WebConfigProject(webConfig);
+        ProjectConfiguration webConfigProject = new ProjectConfiguration(webConfig);
         webConfigProject.webConfig();
     }
 
