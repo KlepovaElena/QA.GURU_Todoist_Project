@@ -38,10 +38,10 @@
 
 <a id="запуск-тестов-сборка-в-jenkins"></a>
 
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/QA.GURU_Todoist_Project/)
+## <img alt="Jenkins" height="25" src="media/logo/Jenkins.svg" width="25"/> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/QA.GURU_Todoist_Project/)
 
 <p align="center">  
-<img src="images/screen/Todoist_allurereport.png" alt="Jenkins" width="950"/></a>  
+<img src="media/screens/Todoist_allurereport.png" alt="Jenkins" width="950"/></a>  
 </p>
 
 ## 📋 Параметры сборки в Jenkins:
