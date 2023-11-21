@@ -102,14 +102,6 @@ gradle clean test -Denv=remote
 <img title="Allure Tests" src="images/screen/OpsCases.png" width="850">  
 </p>
 
-<a id="интеграция-с-jira"></a>
-
-## <img alt="Allure" height="25" src="images/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-884">Jira</a>
-
-<p align="center">  
-<img title="Jira" src="images/screen/JiraSc.png" width="">  
-</p>
-
 ____
 
 <a id="уведомление-в-telegram-о-результатах-выполнения-автоматизированных-тестов"></a>
