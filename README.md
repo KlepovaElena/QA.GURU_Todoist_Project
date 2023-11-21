@@ -96,10 +96,10 @@ gradle clean test -Denv=remote
 <img title="Allure TestOps Dashboard" src="media/screens/Todoist_dashboard.png" width="850">  
 </p>  
 
-## 📄 Авто и Ручные тест-кейсы
+## 📄 Авто тест-кейсы
 
 <p align="center">  
-<img title="Allure Tests" src="images/screen/OpsCases.png" width="850">  
+<img title="Allure Tests" src="media/screens/Todoist_testcases.png" width="850">  
 </p>
 
 ____
