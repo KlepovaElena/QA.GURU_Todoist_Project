@@ -18,6 +18,7 @@ public class WebConfigProject {
         Configuration.browserVersion = webConfig.getBrowserVersion();
         Configuration.browserSize = webConfig.getBrowserSize();
         Configuration.pageLoadStrategy = "eager";
+        Configuration.timeout = 30000;
 
         if (webConfig.isRemote()) {
             Configuration.remote = webConfig.getRemoteUrl();

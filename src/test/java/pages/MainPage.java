@@ -11,23 +11,23 @@ public class MainPage {
 
     SelenideElement
             projectColourInput = $(".color_dropdown_toggle"),
-            addProjectButton = $("#left_menu").$("[aria-label=\"Добавить проект\"]"),
+            addProjectButton = $("[aria-label=\"Основная навигация: проекты, метки, фильтры\"]").$("[aria-label=\"Добавить проект\"]"),
             projectNameInput = $("#edit_project_modal_field_name"),
             submitButton = $("[type=\"submit\"]"),
-            leftMenu = $("#left_menu_inner"),
+            topMenu = $("#top-menu"),
             projectslist = $("#left-menu-projects-panel"),
-            leftMenuPanel = $("#left_menu"),
-            addTaskButton = $("#quick_add_task_holder"),
+            leftMenuPanel = $("[aria-label=\"Основная навигация: проекты, метки, фильтры\"]"),
+            addTaskButton = $("[aria-label=\"Добавить задачу\"]"),
             taskNameField = $("[aria-label=\"Название задачи\"]"),
             taskDescriptionField = $("[aria-label=\"Описание\"]"),
             taskDueDateButton = $("[aria-label=\"Установка срока выполнения\"]"),
             taskSectionList = $(".section_list"),
             leftMenuButton = $("[aria-label=\"Открыть/закрыть боковую панель\"]"),
-            search = $("#quick_find"),
+            search = $("[aria-label=\"Поиск\"]"),
             searchField = $("[aria-label=\"Введите запрос или команду…\"]"),
             searchResult = $("[aria-label=\"Результаты поиска\"]"),
             settingsButton = $("[aria-label=\"Настройки\"]"),
-            content = $("#content"),
+            content = $("[aria-label=\"Основное содержание\"]"),
             shareProjectButton = $("[aria-label=\"Общий доступ\"]"),
             dialogWindow = $("[role=\"dialog\"]"),
             inviteFromProjectButton = $("#invitefromproject");
@@ -113,7 +113,7 @@ public class MainPage {
     }
 
     public MainPage openIncomingTasks() {
-        leftMenu.$(byText("Входящие")).click();
+        topMenu.$(byText("Входящие")).click();
 
         return this;
     }

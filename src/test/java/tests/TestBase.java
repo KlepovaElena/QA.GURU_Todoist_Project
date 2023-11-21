@@ -27,7 +27,7 @@ public class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         open(baseUrl);
         open("/app/today");
-        $("#element-0").setValue("elena.klyopova@gmail.com");
+        $("[type=\"email\"]").setValue("elena.klyopova@gmail.com");
         $("#element-3").setValue("Elena1111!").pressEnter();
     }
 
