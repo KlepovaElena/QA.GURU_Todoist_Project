@@ -76,7 +76,7 @@ gradle clean test -Denv=remote
 ## 📄 Тест-кейсы
 
 <p align="center">  
-<img title="Allure Tests" src="images/screen/AllureCases.png" width="850">   
+<img title="Allure Tests" src="media/screens/Todoist_testcase.png" width="850">   
 </p>
 
 ## 📊 Графики
