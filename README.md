@@ -41,7 +41,7 @@
 ## <img alt="Jenkins" height="25" src="media/logo/Jenkins.svg" width="25"/> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/QA.GURU_Todoist_Project/)
 
 <p align="center">  
-<img src="media/screens/Todoist_allurereport.png" alt="Jenkins" width="950"/></a>  
+<img src="media/screens/Todoist_jenkins.png" alt="Jenkins" width="950"/></a>  
 </p>
 
 ## 📋 Параметры сборки в Jenkins:
@@ -65,12 +65,12 @@ gradle clean test -Denv=remote
 
 <a id="allure-report"></a>
 
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://jenkins.autotests.cloud/job/baucenter-product-autotests-egolikov/allure/">Allure Report</a>
+## <img alt="Allure" height="25" src="media/logo/Allure.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://jenkins.autotests.cloud/job/QA.GURU_Todoist_Project/allure/">Allure Report</a>
 
 ## 🖨️ Основная страница отчёта
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="images/screen/AllureOwer.png" width="850">  
+<img title="Allure Overview Dashboard" src="media/screens/Todoist_allurereport.png" width="850">  
 </p>  
 
 ## 📄 Тест-кейсы
