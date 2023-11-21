@@ -82,8 +82,8 @@ gradle clean test -Denv=remote
 ## 📊 Графики
 
 <p align="center">   
-<img title="Allure Graphics1" src="images/screen/AllureG1.png" width="850">  
-<img title="Allure Graphics2" src="images/screen/AllureG2.png" width="850">  
+<img title="Allure Graphics1" src="media/screens/Todoist_allure1.png" width="850">  
+<img title="Allure Graphics2" src="media/screens/Todoist_allure2.png" width="850">  
 </p>
 
 <a id="интеграция-с-allure-testops"></a>
