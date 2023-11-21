@@ -62,3 +62,72 @@
 ```bash  
 gradle clean test -Denv=remote
 ```
+
+<a id="allure-report"></a>
+
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://jenkins.autotests.cloud/job/baucenter-product-autotests-egolikov/allure/">Allure Report</a>
+
+## 🖨️ Основная страница отчёта
+
+<p align="center">  
+<img title="Allure Overview Dashboard" src="images/screen/AllureOwer.png" width="850">  
+</p>  
+
+## 📄 Тест-кейсы
+
+<p align="center">  
+<img title="Allure Tests" src="images/screen/AllureCases.png" width="850">   
+</p>
+
+## 📊 Графики
+
+<p align="center">   
+<img title="Allure Graphics1" src="images/screen/AllureG1.png" width="850">  
+<img title="Allure Graphics2" src="images/screen/AllureG2.png" width="850">  
+</p>
+
+<a id="интеграция-с-allure-testops"></a>
+
+## <img alt="Allure_TO" height="25" src="images/logo/Allure_TO.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3669/dashboards">Allure TestOps</a>
+
+## 🖨️ Основная страница отчёта
+
+<p align="center">  
+<img title="Allure TestOps Dashboard" src="images/screen/OpsDash.png" width="850">  
+</p>  
+
+## 📄 Авто и Ручные тест-кейсы
+
+<p align="center">  
+<img title="Allure Tests" src="images/screen/OpsCases.png" width="850">  
+</p>
+
+<a id="интеграция-с-jira"></a>
+
+## <img alt="Allure" height="25" src="images/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-884">Jira</a>
+
+<p align="center">  
+<img title="Jira" src="images/screen/JiraSc.png" width="">  
+</p>
+
+____
+
+<a id="уведомление-в-telegram-о-результатах-выполнения-автоматизированных-тестов"></a>
+
+## <img alt="Allure" height="25" src="images/logo/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
+
+____
+<p align="center">  
+<img title="Allure Overview Dashboard" src="images/screen/Teleg.png" width="550">  
+</p>
+
+____
+
+<a id="видеопример-прохождения-тестов-selenoid"></a>
+
+## <img alt="Selenoid" height="25" src="media/logo/Selenoid.svg" width="25"/></a> Видеопример выполнения теста на Selenoid
+
+____
+<p align="center">
+<img title="Selenoid Video" src="media/screens/Todoist.gif" width="550" height="350"  alt="video">   
+</p>
