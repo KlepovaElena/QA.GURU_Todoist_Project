@@ -3,32 +3,31 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:${env}.properties"
+        "classpath:${env}.properties",
 })
 
-public interface WebConfig extends Config{
+public interface WebConfig extends Config {
 
     @Key("browser")
-    @DefaultValue("chrome")
-    String browser();
+    @DefaultValue("CHROME")
+    Browser getBrowser();
 
     @Key("browserVersion")
     @DefaultValue("116.0")
-    String browserVersion();
+    String getBrowserVersion();
 
     @Key("browserSize")
     @DefaultValue("1920x1080")
-    String browserSize();
+    String getBrowserSize();
 
     @Key("baseUrl")
-    @DefaultValue("https://todoist.com")
-    String baseUrl();
+    @DefaultValue("https://todoist.com/")
+    String getBaseUrl();
 
     @Key("isRemote")
-    @DefaultValue("false")
-    boolean isRemote();
+    @DefaultValue("true")
+    Boolean isRemote();
 
     @Key("remoteUrl")
-    @DefaultValue("https://user1:1234@selenoid.autotests.cloud/wd/hub")
-    String remoteUrl();
+    String getRemoteUrl();
 }
