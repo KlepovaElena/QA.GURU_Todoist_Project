@@ -114,11 +114,11 @@ ____
 
 <a id="уведомление-в-telegram-о-результатах-выполнения-автоматизированных-тестов"></a>
 
-## <img alt="Allure" height="25" src="media/logo/Todoist_telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
+## <img alt="Allure" height="25" src="media/logo/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 
 ____
 <p align="center">  
-<img title="Allure Overview Dashboard" src="images/screen/Teleg.png" width="550">  
+<img title="Allure Overview Dashboard" src="media/screens/Todoist_telegram.png" width="550">  
 </p>
 
 ____
