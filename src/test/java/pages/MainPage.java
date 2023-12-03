@@ -11,7 +11,7 @@ public class MainPage {
 
     SelenideElement
             projectColourInput = $(".color_dropdown_toggle"),
-            addProjectButton = $("[aria-label=\"Основная навигация: проекты, метки, фильтры\"]").$("[aria-label=\"Добавить проект\"]"),
+            addProjectButton = $("[aria-label=\"Добавить проект\"]"),
             projectNameInput = $("#edit_project_modal_field_name"),
             submitButton = $("[type=\"submit\"]"),
             topMenu = $("#top-menu"),
@@ -30,7 +30,14 @@ public class MainPage {
             content = $("[aria-label=\"Основное содержание\"]"),
             shareProjectButton = $("[aria-label=\"Общий доступ\"]"),
             dialogWindow = $("[role=\"dialog\"]"),
-            inviteFromProjectButton = $("#invitefromproject");
+            inviteFromProjectButton = $("#invitefromproject"),
+            projectMenuList = $("[aria-label=\"Меню опций проекта\"]"),
+            taskCardMenu = $("[aria-label=\"Другие действия\"]"),
+            deleteTaskButton = $("[aria-label=\"Удалить задачу…\"]"),
+            lavenderColour = $("#dropdown-select-5-option-30"),
+            pageContent = $(".simple_content"),
+            calendarTomorrowDate = $("[data-track=\"scheduler|date_shortcut_tomorrow\"]"),
+            taskEditorSubmitButton = $("[data-testid=\"task-editor-submit-button\"]");
 
 
     public MainPage clickAddProjectButton() {
@@ -45,9 +52,9 @@ public class MainPage {
         return this;
     }
 
-    public MainPage setProjectColour() {
+    public MainPage setProjectColour(String value) {
         projectColourInput.click();
-        $("[aria-label=\"lavender\"]").click();
+        $(byText(value)).click();
 
         return this;
     }
@@ -58,8 +65,8 @@ public class MainPage {
         return this;
     }
 
-    public MainPage selectProject() {
-        leftMenuPanel.$(byText("Дом")).click();
+    public MainPage selectProject(String value) {
+        leftMenuPanel.$(byText(value)).click();
 
         return this;
     }
@@ -77,7 +84,7 @@ public class MainPage {
     }
 
     public MainPage checkFilterPageIsOpened(String value) {
-        $(".simple_content").shouldHave(text(value));
+        pageContent.shouldHave(text(value));
 
         return this;
     }
@@ -107,7 +114,7 @@ public class MainPage {
     }
 
     public MainPage selectDueDateTomorrow() {
-        $("[data-track=\"scheduler|date_shortcut_tomorrow\"]").click();
+        calendarTomorrowDate.click();
 
         return this;
     }
@@ -125,7 +132,7 @@ public class MainPage {
     }
 
     public MainPage submitTaskCreation() {
-        $("[data-testid=\"task-editor-submit-button\"]").click();
+        taskEditorSubmitButton.click();
 
         return this;
     }
@@ -148,14 +155,14 @@ public class MainPage {
         return this;
     }
 
-    public MainPage setValueToSearchField() {
-        searchField.setValue("Дом");
+    public MainPage setValueToSearchField(String value) {
+        searchField.setValue(value);
 
         return this;
     }
 
-    public MainPage checkSearchProjectResult() {
-        searchResult.shouldHave(text("Дом"));
+    public MainPage checkSearchProjectResult(String value) {
+        searchResult.shouldHave(text(value));
 
         return this;
     }
@@ -192,6 +199,25 @@ public class MainPage {
 
     public MainPage checkMessage() {
         dialogWindow.shouldHave(text("Чтобы пригласить остальных, сперва сделайте проект общим."));
+
+        return this;
+    }
+
+    public MainPage deleteProject(String value) {
+        leftMenuPanel.$(byText(value)).click();
+        projectMenuList.click();
+        $(byText("Удалить")).click();
+        submitButton.click();
+
+        return this;
+    }
+
+    public MainPage deleteTask(String value) {
+        leftMenuPanel.$(byText("Входящие")).click();
+        taskSectionList.$(byText(value)).click();
+        taskCardMenu.click();
+        deleteTaskButton.click();
+        submitButton.click();
 
         return this;
     }

@@ -1,5 +1,6 @@
 package tests;
 
+import data.TestData;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -14,6 +15,7 @@ import static io.qameta.allure.Allure.step;
 
 public class MainPageMenuTests extends TestBase {
     MainPage mainPage = new MainPage();
+    TestData testData = new TestData();
 
     @DisplayName("Testing of side menu filters pages")
     @Story("Menu")
@@ -56,10 +58,10 @@ public class MainPageMenuTests extends TestBase {
             mainPage.clickSearch();
         });
         step("Enter search query", () -> {
-            mainPage.setValueToSearchField();
+            mainPage.setValueToSearchField(testData.existsProjectName);
         });
         step("Check search project result", () -> {
-            mainPage.checkSearchProjectResult();
+            mainPage.checkSearchProjectResult(testData.existsProjectName);
         });
     }
 

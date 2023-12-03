@@ -7,9 +7,11 @@ import java.util.Map;
 
 public class WebConfigProject {
     private final WebConfig webConfig;
+    private final AuthorizationConfig authorizationConfig;
 
-    public WebConfigProject(WebConfig webConfig) {
+    public WebConfigProject(WebConfig webConfig, AuthorizationConfig authorizationConfig) {
         this.webConfig = webConfig;
+        this.authorizationConfig = authorizationConfig;
     }
 
     public void webConfig() {
@@ -30,5 +32,9 @@ public class WebConfigProject {
             ));
             Configuration.browserCapabilities = capabilities;
         }
+    }
+
+    public void authorizationConfig() {
+
     }
 }

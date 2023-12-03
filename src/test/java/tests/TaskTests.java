@@ -45,5 +45,8 @@ public class TaskTests extends TestBase {
         step("Check that created task exists", () -> {
             mainPage.checkTaskExists(testData.taskName);
         });
+        step("Delete created task", () -> {
+            mainPage.deleteTask(testData.taskName);
+        });
     }
 }

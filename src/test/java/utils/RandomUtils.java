@@ -10,20 +10,14 @@ public class RandomUtils {
         return faker.harryPotter().house();
     }
 
-    public String getRandomProjectNameUpdated() {
-        return faker.harryPotter().house();
-    }
-
     public String getRandomTaskName() {
-        return faker.harryPotter().spell();
-    }
-
-    public String getRandomTaskNameUpdated() {
         return faker.harryPotter().spell();
     }
 
     public String getRandomTaskDescription() {
         return faker.harryPotter().quote();
     }
+
+    public String getRandomProjectColour() {return faker.options().option("Ягодно-красный", "Красный", "Оранжевый", "Желтый", "Оливковый", "Лайм");};
 
 }

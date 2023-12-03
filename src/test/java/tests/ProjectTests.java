@@ -28,13 +28,16 @@ public class ProjectTests extends TestBase {
             mainPage.setProjectName(testData.projectName);
         });
         step("Select project colour", () -> {
-            mainPage.setProjectColour();
+            mainPage.setProjectColour(testData.projectColour);
         });
         step("Submit project form", () -> {
             mainPage.submit();
         });
         step("Check that created project exists", () -> {
             mainPage.checkProjectExists(testData.projectName);
+        });
+        step("Delete created project", () -> {
+            mainPage.deleteProject(testData.projectName);
         });
     }
 
@@ -44,7 +47,7 @@ public class ProjectTests extends TestBase {
     @Severity(SeverityLevel.NORMAL)
     void shareProjectTest() {
         step("Select project", () -> {
-            mainPage.selectProject();
+            mainPage.selectProject(testData.existsProjectName);
         });
         step("Click share project button", () -> {
             mainPage.clickShareProjectButton();

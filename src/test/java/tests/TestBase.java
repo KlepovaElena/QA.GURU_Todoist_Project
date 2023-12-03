@@ -12,6 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
+import static config.AuthorizationConfigReader.authorizationConfig;
 
 public class TestBase {
 
@@ -19,7 +20,7 @@ public class TestBase {
 
     @BeforeAll
     public static void beforeAll(){
-        WebConfigProject webConfigProject = new WebConfigProject(config);
+        WebConfigProject webConfigProject = new WebConfigProject(config, authorizationConfig);
         webConfigProject.webConfig();}
 
     @BeforeEach
@@ -27,8 +28,8 @@ public class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         open(baseUrl);
         open("/app/today");
-        $("[type=\"email\"]").setValue("elena.klyopova@gmail.com");
-        $("#element-3").setValue("Elena1111!").pressEnter();
+        $("[type=\"email\"]").setValue(authorizationConfig.getEmail());
+        $("#element-3").setValue(authorizationConfig.getPassword()).pressEnter();
     }
 
     @AfterEach
